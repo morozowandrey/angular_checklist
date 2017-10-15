@@ -1,0 +1,7 @@
+<mat-card class="todo-card" *ngFor="let card of todoList; let i = index">
+    <p class="todo-card__name" [ngClass]="{'done': card.done}">{{card.task}}</p>
+    <!--<mat-checkbox clase="todo-card__checkbox" [checked]="card.done" (click)="changeState(i)"></mat-checkbox>-->
+    <input type="checkbox" [checked]="card.done" (click)="changeStateEmit(i)">
+    <div class="todo-car__time">{{card.time | date:"shortTime" }}</div>
+    <div class="delete" (click)="deleteCardEmit(i)">X</div>
+</mat-card>

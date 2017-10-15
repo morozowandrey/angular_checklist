@@ -1,0 +1,16 @@
+.todo-card {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  &__name {
+    margin: 0;
+  }
+}
+
+.done{
+  text-decoration: line-through;
+  color: gray;
+}
+

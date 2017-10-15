@@ -1,4 +1,12 @@
-<h1>Main</h1>
-<p>{{text}}</p>
-<p>{{stat}}</p>
-<button (click)="changeName()">change</button>
+<div class="todo wrapper">
+    <div class="todo-wrapper vertical-center">
+            <mat-form-field class="example-full-width">
+                <input #todoInput matInput placeholder="add new!" (keyup.enter)="addTask(todoInput)"/>
+            </mat-form-field>
+        <app-todo-card
+            [todoList]="todoList"
+            (changeState)="changeState($event)"
+            (deleteCard)="deleteCard($event)"
+        ></app-todo-card>
+    </div>
+</div>
